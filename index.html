@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Guess the Secret number</title>
+    <title>Guess the secret number between 0 and 100</title>
 </head>
 <body>
 
-<form onsubmit="checkTheGuess()">
-    Guess the secret number:
-    <input type="number" id="guessedNumber">
-    <input type="submit">
-  </form>
+
+    <h3>Guess the secret number</h3>
+
+<input type="number" id="guessedNumber" >
+<button onclick="checkTheGuess()">Try it</button>
+ 
 </body>
 
 <script>
-    var numberToGuess = 2000 ;
 
-    var guessedNumber = document.getElementById("guessedNumber");
+    var numberToGuess = Math.floor(Math.random() * 101); ;
 
     function checkTheGuess()
     {
+        var guessedNumber = document.getElementById("guessedNumber").value;
         
         if(numberToGuess == guessedNumber)
             {
