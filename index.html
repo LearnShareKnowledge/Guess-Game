@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess the Secret number</title>
+</head>
+<body>
+
+<form onsubmit="checkTheGuess()">
+    Guess the secret number:
+    <input type="number" id="guessedNumber">
+    <input type="submit">
+  </form>
+</body>
+
+<script>
+    var numberToGuess = 2000 ;
+
+    var guessedNumber = document.getElementById("guessedNumber");
+
+    function checkTheGuess()
+    {
+        
+        if(numberToGuess == guessedNumber)
+            {
+                // success
+                alert('Bingo!!!');
+            }
+        else
+            {
+                if(numberToGuess > guessedNumber)
+                    {
+                        // the number guessed is lower than the secret number
+                        alert("the number guessed is lower than the secret number");
+                    }
+                else
+                    {
+                        // the number guessed is higher than the secret number
+                        alert("the number guessed is higher than the secret number");
+                    }
+            }
+    }
+
+    
+</script>
+</html>
